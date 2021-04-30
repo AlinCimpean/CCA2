@@ -1,0 +1,15 @@
+Task 1
+
+==============================================================================================================================================================================================================================================================================================================================================================
+
+
+
+
+Task 2
+I will be grouping up with Giacomo Pirrone for Assignment 3. We are planning on making a product that allows for biometric recognition instead of password. To do this we are going to use AWS’s Rekognition and have the user submit photos of themselves, and Rekognition will compare the submitted photos to what is in the google cloud data storage or amazon RDS, and if for example the photos are a 70% match the user will be granted access, followed by an email confirming their login in order to make use of a third-party API service.
+For frontend we will use react, and backend will be python flask as we have come to be very familiar with it over the semester. And last year during SEPT we became quite familiar with react and the whole docker process.
+amazon KMS will be used for key management and elastic beanstalk will be used to regulate the computing resources to ensure that we are not working out of scope and working as efficiently with our code as we can. 
+We will try and make use of ECS to dockerize flask and react so they can communicate with eachother and EC2 to host the dockerized containers.
+The frontend would send jsons to the backend endpoints, and the backend endpoint computes the data and potentially archives it in the amazon RDS
+Ideally, we would have had real time photos to be uploaded and compared however that is a little out of scope for this assignment, we would need a lot more time to implement something like that. But if we can make it work that it compares different photos to one that is uploaded by the user, I think that would be a useful piece of content that has potential, not just for this assignment but in general.
+Another potential idea we had was to use a sort of one pass system, where the passwords input into the program change every so often, so that the chances of being hacked become essentially zero, as to access those passwords you need the users face which is already extremely secure, but each time those passwords will be accessed the biometrics of the user will be required so even if by a mistake the user doesn’t log in, after lets say 30 minutes they will need to log back in with their facial recognition for it to work. This idea however is a secondary and we will need to look into the assignment to see if the workload is realistic.
